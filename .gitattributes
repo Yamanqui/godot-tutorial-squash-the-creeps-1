@@ -10,6 +10,7 @@
 *.glb                   lfs
 *.blend                 lfs
 *.obj                   lfs
+
 # Images
 *.png                   lfs
 *.svg                   lfs
@@ -21,14 +22,17 @@
 *.exr                   lfs
 *.hdr                   lfs
 *.dds                   lfs
+
 # Audio
 *.mp3                   lfs
 *.wav                   lfs
 *.ogg                   lfs
+
 # Font & Icon
 *.ttf                   lfs
 *.otf                   lfs
 *.ico                   lfs
+
 # Godot LFS Specific
 *.scn                   lfs
 *.res                   lfs
@@ -36,3 +40,5 @@
 *.anim                  lfs
 *.mesh                  lfs
 *.lmbake                lfs
+
+# Other files

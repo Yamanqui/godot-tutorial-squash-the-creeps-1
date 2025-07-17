@@ -1,0 +1,38 @@
+# Define macros (only works in top-level gitattributes files)
+[attr]lfs               filter=lfs diff=lfs merge=lfs -text
+
+# Normalize EOL for all files that Git considers text files.
+*                       text=auto eol=lf
+
+# 3D Models
+*.fbx                   lfs
+*.gltf                  lfs
+*.glb                   lfs
+*.blend                 lfs
+*.obj                   lfs
+# Images
+*.png                   lfs
+*.svg                   lfs
+*.jpg                   lfs
+*.jpeg                  lfs
+*.gif                   lfs
+*.tga                   lfs
+*.webp                  lfs
+*.exr                   lfs
+*.hdr                   lfs
+*.dds                   lfs
+# Audio
+*.mp3                   lfs
+*.wav                   lfs
+*.ogg                   lfs
+# Font & Icon
+*.ttf                   lfs
+*.otf                   lfs
+*.ico                   lfs
+# Godot LFS Specific
+*.scn                   lfs
+*.res                   lfs
+*.material              lfs
+*.anim                  lfs
+*.mesh                  lfs
+*.lmbake                lfs

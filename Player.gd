@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 		#Input.is_action_pressed("move_forward") ||
 		#Input.is_action_pressed("move_back")
 	#):
-		direction = Vector3(Input.get_axis("move_left","move_right"), 0, Input.get_axis("move_forward", "move_back")).normalized()
+		direction = Vector3(Input.get_axis("move_left", "move_right"), 0, Input.get_axis("move_forward", "move_back")).normalized()
 	
 	#if Input.is_action_pressed("move_right"):
 		#direction.x += 1
@@ -49,7 +49,7 @@ func _physics_process(delta: float) -> void:
 	
 	if direction != Vector3.ZERO:
 		#direction = direction.normalized()
-		$%Pivot.rotation.y = lerp_angle($%Pivot.rotation.y, atan2(-direction.x, -direction.z), 20*delta)
+		$%Pivot.rotation.y = lerp_angle($%Pivot.rotation.y, atan2(-direction.x, -direction.z), 20 * delta)
 		$%AnimationPlayer.speed_scale = 4
 		#$Pivot.basis = Basis.looking_at(direction)
 	else:
@@ -78,12 +78,12 @@ func _physics_process(delta: float) -> void:
 				target_velocity.y = bounce_impulse
 				break
 	
-	$%Pivot.rotation.x = PI/6 * velocity.y / jump_impulse
+	$%Pivot.rotation.x = PI / 6 * velocity.y / jump_impulse
 	
 	velocity = target_velocity
 	
-	position.x = clamp(position.x, -bounding_size.x/2, bounding_size.x/2)
-	position.z = clamp(position.z, -bounding_size.z/2, bounding_size.z/2)
+	position.x = clamp(position.x, -bounding_size.x / 2, bounding_size.x / 2)
+	position.z = clamp(position.z, -bounding_size.z / 2, bounding_size.z / 2)
 	
 	move_and_slide()
 
